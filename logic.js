@@ -58,5 +58,18 @@ for (var i=9;i<18;i++) {
     } else if (i > currentHour) {
        document.getElementById(i.toString()).classList.add('future');
     }
+    //get items stored in local storage
+    //I did this little part much later
+    var textValue = document.getElementById(i.toString()).value;
+    textValue = localStorage.getItem(i.toString);
+    console.log(textValue);
+    console.log(i);
 }
+
+//function to store text
+function savetext(i) {
+    var myValue = document.getElementById(i.toString()).value
+    localStorage.setItem(i.toString, myValue);
+}
+
 
