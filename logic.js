@@ -59,24 +59,12 @@ for (var i=9;i<18;i++) {
        document.getElementById(i.toString()).classList.add('future');
     }
     //get items stored in local storage
-    //I did this little part much later
-    // var textValue = localStorage.getItem(i.toString);
-    // document.getElementById(i.toString()).value = textValue;
-    // console.log(textValue);
-    // console.log(i);
     var j = i.toString();
-document.getElementById(j).value=localStorage.getItem(j);
-console.log(localStorage.getItem(j));
+    document.getElementById(j).value=localStorage.getItem(j);
 }
 
 //function to store text
 function savetext(i) {
     var myValue = document.getElementById(i.toString()).value;
     localStorage.setItem(i.toString(), myValue);
-}
-
-for (var i=9;i<18;i++) {
-//     var j = i.toString();
-// document.getElementById(j).value=localStorage.getItem(j);
-// console.log(localStorage.getItem(j));
 }
