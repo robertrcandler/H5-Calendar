@@ -49,4 +49,14 @@ var realYear = rn.getFullYear(); //2020
 var displayDate = document.getElementById("currentDay");
 displayDate.textContent = realMonth+" "+realDate+", "+realYear;
 
+//change the description box color based on time
+for (var i=9;i<18;i++) {
+    if (i < currentHour) {
+        document.getElementById(i.toString()).classList.add('past');
+    } else if (i === currentHour) {
+        document.getElementById(i.toString()).classList.add('present');
+    } else if (i > currentHour) {
+       document.getElementById(i.toString()).classList.add('future');
+    }
+}
 
